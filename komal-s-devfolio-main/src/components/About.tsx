@@ -60,7 +60,7 @@ const highlights = [
   {
     icon: LeetCodeIcon,
     title: "LeetCode",
-    description: "120+ DSA Problems Solved",
+    description: "550+ DSA Problems Solved",
     link: "https://leetcode.com/u/komalsathvik/",
   },
   {
