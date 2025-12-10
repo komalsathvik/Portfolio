@@ -1,33 +1,25 @@
-export default function Resume() {
-  const viewResume = () => {
-    window.open(
-      "https://drive.google.com/file/d/1rWx9bBjTYYo8nSgiBPLFLw0-mNWlrAZ6/view?usp=sharing",
-      "_blank"
-    );
-  };
-
-  const downloadResume = () => {
-    window.open(
-      "https://drive.google.com/uc?export=download&id=1rWx9bBjTYYo8nSgiBPLFLw0-mNWlrAZ6",
-      "_blank"
-    );
-  };
-
+const Resume = () => {
   return (
     <div className="flex gap-4">
-      <button
-        onClick={viewResume}
-        className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all"
+      {/* View Resume Button */}
+      <a
+        href="/resume-view"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all duration-300 shadow"
       >
         View Resume
-      </button>
+      </a>
 
-      <button
-        onClick={downloadResume}
-        className="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all"
+      {/* Download Resume Button */}
+      <a
+        href="/resume-download"
+        className="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300 shadow"
       >
         Download Resume
-      </button>
+      </a>
     </div>
   );
-}
+};
+
+export default Resume;

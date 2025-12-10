@@ -1,3 +1,14 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+  "redirects": [
+    {
+      "source": "/resume-download",
+      "destination": "https://drive.google.com/uc?export=download&id=1rWx9bBjTYYo8nSgiBPLFLw0-mNWlrAZ6",
+      "permanent": true
+    },
+    {
+      "source": "/resume-view",
+      "destination": "https://drive.google.com/file/d/1rWx9bBjTYYo8nSgiBPLFLw0-mNWlrAZ6/view",
+      "permanent": true
+    }
+  ]
 }
