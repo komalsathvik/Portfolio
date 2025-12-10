@@ -1,12 +1,13 @@
+import ResumePDF from "../assets/resume.pdf";
+
 const Resume = () => {
   const downloadResume = () => {
-    // 💡 NEW URL: The path is relative to your website's domain root (e.g., /Komal_Sathvik_Resume.pdf)
-    const url = "/resume.pdf";
+    const url = ResumePDF;
 
-    // The logic to force the download remains the same and is correct
+    // The logic to force the download is correct:
     const a = document.createElement("a");
     a.href = url;
-    a.download = "Komal_Sathvik_Resume.pdf";
+    a.download = "Komal_Sathvik_Resume.pdf"; // This sets the name the user sees
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
