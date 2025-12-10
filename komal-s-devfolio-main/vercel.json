@@ -1,12 +1,15 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "headers": [
+  "routes": [
     {
-      "source": "/resume.pdf",
-      "headers": [
-        { "key": "Cache-Control", "value": "no-cache" },
-        { "key": "Content-Type", "value": "application/pdf" }
-      ]
+      "src": "/resume\\.pdf",
+      "dest": "/resume.pdf",
+      "headers": {
+        "Content-Type": "application/pdf"
+      }
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
