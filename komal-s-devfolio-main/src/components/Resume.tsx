@@ -1,26 +1,33 @@
-const Resume = () => {
+export default function Resume() {
+  const viewResume = () => {
+    window.open(
+      "https://drive.google.com/file/d/1rWx9bBjTYYo8nSgiBPLFLw0-mNWlrAZ6/view?usp=sharing",
+      "_blank"
+    );
+  };
+
   const downloadResume = () => {
-    const url =
-      "https://drive.google.com/uc?export=download&id=1rWx9bBjTYYo8nSgiBPLFLw0-mNWlrAZ6";
-
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "Komal_Sathvik_Resume.pdf";
-
-    // Attempting a direct click on the <a> tag
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    window.open(
+      "https://drive.google.com/uc?export=download&id=1rWx9bBjTYYo8nSgiBPLFLw0-mNWlrAZ6",
+      "_blank"
+    );
   };
 
   return (
-    <button
-      onClick={downloadResume}
-      className="px-4 py-2 rounded-lg bg-primary text-white hover:bg-primary/90 transition-all duration-300 shadow"
-    >
-      Download Resume
-    </button>
-  );
-};
+    <div className="flex gap-4">
+      <button
+        onClick={viewResume}
+        className="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-all"
+      >
+        View Resume
+      </button>
 
-export default Resume;
+      <button
+        onClick={downloadResume}
+        className="px-4 py-2 border border-primary text-primary rounded-lg hover:bg-primary hover:text-white transition-all"
+      >
+        Download Resume
+      </button>
+    </div>
+  );
+}
