@@ -1,13 +1,13 @@
-import ResumePDF from "../assets/resume.pdf";
-
 const Resume = () => {
   const downloadResume = () => {
-    const url = ResumePDF;
+    const url =
+      "https://drive.google.com/uc?export=download&id=1rWx9bBjTYYo8nSgiBPLFLw0-mNWlrAZ6";
 
-    // The logic to force the download is correct:
     const a = document.createElement("a");
     a.href = url;
-    a.download = "Komal_Sathvik_Resume.pdf"; // This sets the name the user sees
+    a.download = "Komal_Sathvik_Resume.pdf";
+
+    // Attempting a direct click on the <a> tag
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
