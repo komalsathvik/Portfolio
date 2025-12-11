@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Experience", href: "#experience" },
   { name: "Education", href: "#education" },
   { name: "Contact", href: "#contact" },
-  { name: "Resume", href: "/resume" }, // 🔥 new item
+  { name: "Resume", href: "#resume" },
 ];
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
 
       const sections = navLinks
-        .filter((link) => link.name !== "Resume") // Prevent resume affecting active state
+        .filter((link) => link.name !== "Resume")
         .map((link) => link.href.substring(1));
 
       const scrollPosition = window.scrollY + 100;
@@ -49,12 +49,9 @@ const Navbar = () => {
     setIsMobileMenuOpen(false);
   };
 
-  // Function to trigger resume download
-  const downloadResume = () => {
-    const link = document.createElement("a");
-    link.href = "/Sathvik_Resume1.pdf"; // 🔥 PDF path
-    link.download = "Komal_Sathvik_Resume.pdf"; // download name
-    link.click();
+  // 🚀 Updated: open "resume (2).pdf"
+  const openResume = () => {
+    window.open("/resume (2).pdf", "_blank");
   };
 
   return (
@@ -79,14 +76,13 @@ const Navbar = () => {
             <span className="gradient-text">MKS</span>
           </a>
 
-          {/* ================= Desktop Navigation ================= */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             {navLinks.map((link) =>
               link.name === "Resume" ? (
-                // 🔥 Resume download button Desktop
                 <button
                   key="resume"
-                  onClick={downloadResume}
+                  onClick={openResume}
                   className="ml-2 px-4 py-2 rounded-lg text-primary font-semibold border border-primary hover:bg-primary hover:text-white transition-all duration-300"
                 >
                   Resume
@@ -126,16 +122,15 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* ================= Mobile Menu ================= */}
+        {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg border-b border-border animate-fade-in">
             <div className="container-custom py-4 flex flex-col gap-2">
               {navLinks.map((link) =>
                 link.name === "Resume" ? (
-                  // 🔥 Resume download Mobile
                   <button
                     key="resume"
-                    onClick={downloadResume}
+                    onClick={openResume}
                     className="px-4 py-3 rounded-lg text-primary font-semibold border border-primary hover:bg-primary hover:text-white transition-all duration-300"
                   >
                     Resume
