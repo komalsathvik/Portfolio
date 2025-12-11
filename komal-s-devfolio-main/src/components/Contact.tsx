@@ -1,147 +1,88 @@
-import { useState } from "react";
-import { Mail, Phone, Send, MapPin, Github, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin, Github, Linkedin } from "lucide-react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon!",
-    });
-
-    setFormData({ name: "", email: "", message: "" });
-    setIsSubmitting(false);
-  };
-
   return (
-    <section id="contact" className="section-padding bg-card/30 relative">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.02)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+    <section id="contact" className="section-padding relative overflow-hidden">
+      {/* Soft gradient + grid background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
+      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.05)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
-      <div className="container-custom relative z-10">
-        <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-4">
-              Get In Touch
-            </span>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-              Let's Work
-              <span className="gradient-text"> Together</span>
-            </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Open to internships, freelance projects, and collaboration
-              opportunities.
-            </p>
-          </div>
+      <div className="relative container-custom z-10">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium">
+            Contact
+          </span>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Info */}
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">
-                  Contact Information
-                </h3>
-                <p className="text-muted-foreground mb-8">
-                  Feel free to reach out for opportunities, collaborations, or
-                  just to say hello!
-                </p>
-              </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-6 mb-4">
+            Let's Connect
+            <span className="gradient-text"> Together</span>
+          </h2>
 
-              {/* Contact Details */}
-              <div className="space-y-4">
-                <a
-                  href="mailto:mksathvik03@gmail.com"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Email</p>
-                    <p className="text-foreground font-medium">
-                      mksathvik03@gmail.com
-                    </p>
-                  </div>
-                </a>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Whether you're looking for a developer, collaborator, or just want
+            to say hello — feel free to reach out!
+          </p>
+        </div>
 
-                <a
-                  href="tel:+916301383980"
-                  className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-300 group"
-                >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Phone</p>
-                    <p className="text-foreground font-medium">
-                      +91-6301383980
-                    </p>
-                  </div>
-                </a>
-
-                <div className="flex items-center gap-4 p-4 rounded-xl bg-background border border-border/50">
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="text-foreground font-medium">
-                      Hyderabad, India
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Social Links */}
-              <div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Connect with me
-                </p>
-                <div className="flex gap-3">
-                  <a
-                    href="https://linkedin.com/in/komalsathvik"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-xl bg-background border border-border/50 text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300"
-                  >
-                    <Linkedin className="h-6 w-6" />
-                  </a>
-                  <a
-                    href="https://github.com/komalsathvik"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="p-3 rounded-xl bg-background border border-border/50 text-muted-foreground hover:text-primary hover:border-primary/30 transition-all duration-300"
-                  >
-                    <Github className="h-6 w-6" />
-                  </a>
-                </div>
-              </div>
+        {/* Main Contact Grid */}
+        <div className="max-w-4xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Email */}
+          <a
+            href="mailto:mksathvik03@gmail.com"
+            className="group p-6 rounded-2xl bg-background/60 backdrop-blur border border-border/60 hover:border-primary/40 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center"
+          >
+            <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-primary/10 group-hover:bg-primary/20 transition">
+              <Mail className="h-6 w-6 text-primary" />
             </div>
+            <h4 className="text-lg font-semibold mt-4">Email</h4>
+            <p className="text-muted-foreground mt-1">mksathvik03@gmail.com</p>
+          </a>
+
+          {/* Phone */}
+          <a
+            href="tel:+916301383980"
+            className="group p-6 rounded-2xl bg-background/60 backdrop-blur border border-border/60 hover:border-primary/40 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center"
+          >
+            <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-primary/10 group-hover:bg-primary/20 transition">
+              <Phone className="h-6 w-6 text-primary" />
+            </div>
+            <h4 className="text-lg font-semibold mt-4">Phone</h4>
+            <p className="text-muted-foreground mt-1">+91 6301383980</p>
+          </a>
+
+          {/* Location */}
+          <div className="p-6 rounded-2xl bg-background/60 backdrop-blur border border-border/60 hover:border-primary/40 hover:shadow-lg transition-all duration-300 flex flex-col items-center text-center">
+            <div className="w-14 h-14 rounded-xl flex items-center justify-center bg-primary/10 group-hover:bg-primary/20 transition">
+              <MapPin className="h-6 w-6 text-primary" />
+            </div>
+            <h4 className="text-lg font-semibold mt-4">Location</h4>
+            <p className="text-muted-foreground mt-1">Hyderabad, India</p>
+          </div>
+        </div>
+
+        {/* Social Links */}
+        <div className="text-center mt-12">
+          <p className="text-sm text-muted-foreground mb-3">Connect with me</p>
+
+          <div className="flex justify-center gap-4">
+            <a
+              href="https://linkedin.com/in/komalsathvik"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-xl bg-background/60 backdrop-blur border border-border/60 hover:text-primary hover:border-primary/40 transition-all duration-300"
+            >
+              <Linkedin className="h-6 w-6" />
+            </a>
+
+            <a
+              href="https://github.com/komalsathvik"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-3 rounded-xl bg-background/60 backdrop-blur border border-border/60 hover:text-primary hover:border-primary/40 transition-all duration-300"
+            >
+              <Github className="h-6 w-6" />
+            </a>
           </div>
         </div>
       </div>
