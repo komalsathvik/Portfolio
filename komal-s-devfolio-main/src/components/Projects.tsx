@@ -4,6 +4,7 @@ import {
   ShoppingCart,
   Utensils,
   Github,
+  TrendingUp,
 } from "lucide-react";
 
 const projects = [
@@ -60,6 +61,29 @@ const projects = [
     // 🔗 TODO: paste your live demo & github (if repo is public)
     liveDemo: "https://intel-hackathon-two.vercel.app/",
     github: "https://github.com/komalsathvik/intel-hackathon",
+  },
+  {
+    title: "Stocknex",
+    subtitle: "Stock Market Trading Platform",
+    icon: TrendingUp,
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Recharts",
+      "JWT",
+      "Axios",
+    ],
+    details: [
+      "Built a modern trading platform clone inspired by Zerodha with real-time stock display and user dashboards.",
+      "Implemented live data dashboards featuring donut and line charts for comprehensive stock overviews.",
+      "Ensured secure user access and data protection using JWT-based authentication.",
+      "Developed a responsive UI for both landing and dashboard pages with seamless company stock listing and order placing functionality.",
+    ],
+    gradient: "from-green-500/20 to-emerald-500/20",
+    github: "https://github.com/komalsathvik/Stocknex",
+    liveDemo: "",
   },
   {
     title: "FoodRestro Application",

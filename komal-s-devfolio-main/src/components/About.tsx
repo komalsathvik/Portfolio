@@ -60,7 +60,7 @@ const highlights = [
   {
     icon: LeetCodeIcon,
     title: "LeetCode",
-    description: "550+ DSA Problems Solved",
+    description: "700+ DSA Problems Solved",
     link: "https://leetcode.com/u/komalsathvik/",
   },
   {
@@ -128,7 +128,7 @@ const About = () => {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-4 rounded-xl bg-secondary/30">
                     <div className="text-3xl font-bold gradient-text mb-1">
-                      9.38
+                      9.46
                     </div>
                     <div className="text-sm text-muted-foreground">CGPA</div>
                   </div>
@@ -156,7 +156,7 @@ const About = () => {
                       Lead
                     </div>
                     <div className="text-sm text-muted-foreground">
-                      Web Team
+                      GDG CVR Web Team
                     </div>
                   </div>
                 </div>

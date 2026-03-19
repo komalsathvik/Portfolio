@@ -21,7 +21,7 @@ const Hero = () => {
       </div>
 
       {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.03)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.03)_1px,transparent_1px)] bg-[size:100px_100px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.8)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.8)_1px,transparent_1px)] bg-[size:100px_100px]" />
 
       <div className="container-custom relative z-10 pt-20 w-full">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
@@ -120,7 +120,7 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-fade-up animation-delay-200">
             <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-3xl overflow-hidden shadow-xl border border-border/40 bg-secondary/20 backdrop-blur-md hover:scale-105 transition-all duration-500">
               <img
-                src="/profile.jpg" // <-- replace with your image file
+                src="/profile.JPG" // <-- replace with your image file
                 alt="Profile Photo"
                 className="w-full h-full object-cover"
               />

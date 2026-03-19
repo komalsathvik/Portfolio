@@ -5,7 +5,7 @@ const Contact = () => {
     <section id="contact" className="section-padding relative overflow-hidden">
       {/* Soft gradient + grid background */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
-      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.05)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.05)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.8)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.8)_1px,transparent_1px)] bg-[size:50px_50px]" />
 
       <div className="relative container-custom z-10">
         {/* Section Header */}

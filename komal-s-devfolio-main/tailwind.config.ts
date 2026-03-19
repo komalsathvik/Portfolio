@@ -83,7 +83,7 @@ export default {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'hero-pattern': 'radial-gradient(ellipse at top, hsl(220 25% 10%) 0%, hsl(220 20% 4%) 70%)',
+        'hero-pattern': 'radial-gradient(ellipse at top, hsl(210 40% 96%) 0%, hsl(0 0% 100%) 70%)',
       },
     },
   },

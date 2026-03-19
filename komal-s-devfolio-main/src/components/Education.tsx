@@ -5,8 +5,8 @@ const educationData = [
     degree: "B.Tech in Computer Science and Engineering",
     institution: "CVR College of Engineering, Hyderabad",
     duration: "2023 – 2027",
-    grade: "CGPA: 9.38",
-    gradeNote: "(up to 2nd year)",
+    grade: "CGPA: 9.46",
+    gradeNote: "(up to 3rd year)",
     icon: GraduationCap,
     current: true,
   },
@@ -42,11 +42,10 @@ const Education = () => {
             {educationData.map((edu, index) => (
               <div
                 key={edu.degree}
-                className={`group relative p-6 md:p-8 rounded-2xl bg-card border transition-all duration-300 hover:shadow-[0_0_40px_hsl(var(--primary)/0.1)] ${
-                  edu.current
-                    ? "border-primary/50"
-                    : "border-border/50 hover:border-primary/30"
-                }`}
+                className={`group relative p-6 md:p-8 rounded-2xl bg-card border transition-all duration-300 hover:shadow-[0_0_40px_hsl(var(--primary)/0.1)] ${edu.current
+                  ? "border-primary/50"
+                  : "border-border/50 hover:border-primary/30"
+                  }`}
               >
                 {/* Current Badge */}
                 {edu.current && (

@@ -2,12 +2,28 @@ import { Briefcase, Code, Trophy } from "lucide-react";
 
 const experiences = [
   {
+    title: "Grand Prize Winner",
+    organization: "CodeRift Hackathon 2026",
+    description:
+      "Secured 1st place among 30+ teams in an intensive 8-hour competitive hackathon at Ciencia, CVR College of Engineering. Built StorePilot, a comprehensive retail solution featuring multilingual support and automated WhatsApp reminders.",
+    icon: Trophy,
+    type: "Professional",
+  },
+  {
     title: "Web Team Lead",
     organization: "GDGC-CVR",
     description:
       "Leading the web development team for Google Developer Groups on Campus at CVR College of Engineering. Responsible for mentoring team members, overseeing web projects, and organizing technical workshops.",
     icon: Briefcase,
     type: "Leadership",
+  },
+  {
+    title: "Hackathon Participant",
+    organization: "Intel Hackathon 2025",
+    description:
+      "Competed and developed a full-stack product page equipped with an AI chatbot to facilitate direct customer sales.",
+    icon: Trophy,
+    type: "Competition",
   },
   {
     title: "Open Source Contributor",
@@ -24,7 +40,7 @@ const experiences = [
       "Actively contributed to open-source repositories through bug fixes, feature enhancements, and documentation improvements while collaborating with maintainers.",
     icon: Code,
     type: "Open Source",
-  },  
+  },
   {
     title: "Hackathon Participant",
     organization: "Google Developer Clubs Solution Challenge 2025",
@@ -39,14 +55,14 @@ const Experience = () => {
   return (
     <section id="experience" className="section-padding bg-card/30 relative">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.02)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.8)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.8)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
             <span className="inline-block px-4 py-1.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium mb-4">
-              Experience
+              Experience & Achievements
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
               Professional
@@ -64,9 +80,8 @@ const Experience = () => {
               {experiences.map((exp, index) => (
                 <div
                   key={exp.title}
-                  className={`relative flex flex-col md:flex-row gap-8 ${
-                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                  }`}
+                  className={`relative flex flex-col md:flex-row gap-8 ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                    }`}
                 >
                   {/* Timeline Dot */}
                   <div className="absolute left-0 md:left-1/2 top-0 w-4 h-4 -translate-x-1/2 md:-translate-x-1/2">
@@ -75,14 +90,12 @@ const Experience = () => {
 
                   {/* Content */}
                   <div
-                    className={`flex-1 pl-8 md:pl-0 ${
-                      index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"
-                    }`}
+                    className={`flex-1 pl-8 md:pl-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"
+                      }`}
                   >
                     <div
-                      className={`p-6 rounded-2xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-300 ${
-                        index % 2 === 0 ? "md:ml-auto" : ""
-                      }`}
+                      className={`p-6 rounded-2xl bg-background border border-border/50 hover:border-primary/30 transition-all duration-300 ${index % 2 === 0 ? "md:ml-auto" : ""
+                        }`}
                     >
                       {/* Type Badge */}
                       <span className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium mb-4">
@@ -91,9 +104,8 @@ const Experience = () => {
 
                       {/* Header */}
                       <div
-                        className={`flex items-center gap-4 mb-4 ${
-                          index % 2 === 0 ? "md:flex-row-reverse" : ""
-                        }`}
+                        className={`flex items-center gap-4 mb-4 ${index % 2 === 0 ? "md:flex-row-reverse" : ""
+                          }`}
                       >
                         <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
                           <exp.icon className="h-6 w-6 text-primary" />
@@ -110,9 +122,8 @@ const Experience = () => {
 
                       {/* Description */}
                       <p
-                        className={`text-muted-foreground ${
-                          index % 2 === 0 ? "md:text-right" : ""
-                        }`}
+                        className={`text-muted-foreground ${index % 2 === 0 ? "md:text-right" : ""
+                          }`}
                       >
                         {exp.description}
                       </p>

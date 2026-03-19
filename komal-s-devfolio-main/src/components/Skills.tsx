@@ -41,7 +41,7 @@ const Skills = () => {
   return (
     <section id="skills" className="section-padding bg-card/30 relative">
       {/* Background Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.02)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(hsl(var(--border)/0.8)_1px,transparent_1px),linear-gradient(90deg,hsl(var(--border)/0.8)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
       <div className="container-custom relative z-10">
         <div className="max-w-6xl mx-auto">
