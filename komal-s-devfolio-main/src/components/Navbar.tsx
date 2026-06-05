@@ -51,7 +51,7 @@ const Navbar = () => {
 
   // 🚀 Updated: open "resume (2).pdf"
   const openResume = () => {
-    window.open("/resume (2).pdf", "_blank");
+    window.open("/sathvik_resume.pdf", "_blank");
   };
 
   return (
@@ -103,7 +103,7 @@ const Navbar = () => {
                 >
                   {link.name}
                 </a>
-              )
+              ),
             )}
           </div>
 
@@ -151,7 +151,7 @@ const Navbar = () => {
                   >
                     {link.name}
                   </a>
-                )
+                ),
               )}
             </div>
           </div>
